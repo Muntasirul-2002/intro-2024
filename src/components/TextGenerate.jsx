@@ -15,3 +15,5 @@ Successfully delivered software products to the client 🚀`;
 };
 
 export default TextGenerate;
+
+//TODO: decrease the size of the text (words), it's to large in mobile view

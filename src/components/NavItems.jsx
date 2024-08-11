@@ -11,6 +11,7 @@ const NavItems = () => {
           link: "/",
           img:"/muntasirul5.jpg",
           icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+          //TODO: remove this icon and set only the avatar, remove from here and go to the floatingnav page and set the home link in the avatar
         },
         {
           name: "About",
@@ -40,3 +41,4 @@ const NavItems = () => {
 }
 
 export default NavItems
+
