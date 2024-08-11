@@ -5,14 +5,17 @@ import { IconHome, IconMessage,IconContract, IconUser } from "@tabler/icons-reac
 
 const NavItems = () => {
     const navItems = [
+      
         {
-          name: "Home",
+          name: "Muntasirul",
           link: "/",
+          img:"/muntasirul5.jpg",
           icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
         },
         {
           name: "About",
           link: "/about",
+          
           icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
         },
         {
@@ -28,6 +31,7 @@ const NavItems = () => {
       ];
   return (
     <div className='relative w-full'>
+     
         <FloatingNavbar navItems={navItems} />
         {/* <NavItems/> */}
        

@@ -21,8 +21,8 @@ const TypewriterEffectSmoothDemo = () => {
   return (
     <div>
       
-      <div className="flex flex-col items-center justify-center h-[40rem]">
-        <p className="text-white dark:text-neutral-200 text-xs sm:text-base  ">
+      <div className="flex flex-col items-center justify-center h-[30rem]">
+        <p className="text-white dark:text-neutral-200 text-xs sm:text-base">
           Hi there 👋
         </p>
         <TypewriterEffectSmooth words={words} />

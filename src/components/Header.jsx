@@ -1,14 +1,12 @@
-import React from 'react'
-import TypewriterEffectSmoothDemo from './TypewriterEffectSmoothDemo'
+import React from "react";
+import TypewriterEffectSmoothDemo from "./TypewriterEffectSmoothDemo";
 
 const Header = () => {
   return (
     <div>
-      
-       <TypewriterEffectSmoothDemo/>
-    
+      <TypewriterEffectSmoothDemo />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
