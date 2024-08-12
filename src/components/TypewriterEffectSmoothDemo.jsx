@@ -42,6 +42,6 @@ const TypewriterEffectSmoothDemo = () => {
     </div>
   );
 };
-//TODO: increase the font size of the typewriter text
+
 
 export default TypewriterEffectSmoothDemo;

@@ -18,7 +18,7 @@ const Experience = () => {
   return (
     <div>
      
-     <h1 className="flex justify-center items-center text-3xl gap-2  font-semibold">
+     <h1 className="flex justify-center text-3xl md:text-5xl items-center gap-2 text-white font-bold mb-2">
         <span className="text-blue-500">My</span> Experience
       </h1>
       
@@ -45,7 +45,7 @@ const Experience = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              <div className="font-bold">Senior Web Developer</div>
+              <div className="font-bold text-white">Senior Web Developer</div>
             </Typography>
             <Typography>
               <Link to="https://megamindsit.in/">
