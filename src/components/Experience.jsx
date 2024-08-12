@@ -6,10 +6,6 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
-import LaptopMacIcon from "@mui/icons-material/LaptopMac";
-import HotelIcon from "@mui/icons-material/Hotel";
-import RepeatIcon from "@mui/icons-material/Repeat";
 import Typography from "@mui/material/Typography";
 import megaminds from "../assets/images/megaminds.jpg";
 import { Link } from "react-router-dom";
@@ -73,7 +69,7 @@ const Experience = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              <div className="font-bold">Web Developer</div>
+              <div className="font-bold text-white">Web Developer</div>
             </Typography>
             <Typography>
               {" "}
@@ -102,9 +98,9 @@ const Experience = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              <div className="font-bold">Freelance</div>
+              <div className="font-bold text-white">Freelance</div>
             </Typography>
-            <Typography>Relite services</Typography>
+            <Typography className=" text-sm text-blue-500">Relite services</Typography>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -118,9 +114,9 @@ const Experience = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              <div className="font-bold">Web Developer</div>
+              <div className="font-bold text-white">Web Developer</div>
             </Typography>
-            <Typography>Built-in Tech</Typography>
+            <Typography className="text-sm text-blue-500">Built-in Tech</Typography>
           </TimelineContent>
         </TimelineItem>
         
