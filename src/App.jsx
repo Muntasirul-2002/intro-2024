@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
-
+import Footer from './components/Footer'
 import NavItems from './components/NavItems';
 const App = () => {
   return (
@@ -16,6 +16,7 @@ const App = () => {
         <Route path='/resume' element={<Resume/>} />
         <Route path='/contact' element={<Contact/>} />
       </Routes>
+      
     </div>
   )
 }

@@ -4,8 +4,8 @@ import { socialMedia } from "../data/index";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div>
-      <footer className="w-full mb-[70px] md:mb-5">
+    <div className="bg-black ">
+      <footer className="w-full md:mb-5">
         <div className="flex flex-col items-center">
           <h1 className="font-bold text-4xl text-white md:text-5xl text-center lg:mx-w-[45vw] mb-5">
             Let's <span className="text-blue-500">connect</span> build a
@@ -34,7 +34,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      //TODO:Add link in copyright name
     </div>
   );
 };

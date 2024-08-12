@@ -1,6 +1,8 @@
 import React from "react";
 
 import HighlightText from "../components/HighlightText";
+import Testimonials from "../components/Testimonials";
+import Stat from "../components/Stat";
 
 
 const About = () => {
@@ -150,12 +152,16 @@ const About = () => {
             </div>
           </div>
         </div>
+        <div className="flex justify-center items-center mb-10">
+            <Stat/>
+          </div>
         <div>
-          <h1 className="text-white flex justify-center items-center text-3xl font-bold">
+          <h1 className="text-blue-500 flex justify-center items-center text-3xl md:font-4xl lg:font-5xl mb-9 font-bold">
             Testimonials
           </h1>
-          <div>
          
+          <div>
+         <Testimonials/>
           </div>
         </div>
       </div>

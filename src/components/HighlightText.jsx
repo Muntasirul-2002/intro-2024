@@ -18,16 +18,18 @@ const HighlightText = () => {
           duration: 0.5,
           ease: [0.4, 0.0, 0.2, 1],
         }}
-        className="text-sm px-4 md:text-sm lg:text-sm font-bold text-white dark:text-white max-w-4xl  leading-relaxed lg:leading-snug text-justify mx-auto"
+        className="text-md px-1 md:text-md lg:text-lg font-bold text-white dark:text-white max-w-4xl  leading-relaxed lg:leading-snug text-justify mx-auto"
       >
+        <div className="lg:leading-9"> 
         I'm Muntasirul, a passionate{" "}
         <Highlight className="text-black dark:text-white">
           software developer
         </Highlight>{" "}
         with experience in building modern web applications using the{" "}
-        <Highlight className="text-black dark:text-white">MERN stack 🏅</Highlight>
+        <Highlight className="text-black dark:text-white">MERN Stack 🏅</Highlight>
         . I specialize in creating responsive, user-friendly interfaces and
         robust backend solutions. 
+        </div>
         <br/>
         <br />
         I enjoy solving complex problems and

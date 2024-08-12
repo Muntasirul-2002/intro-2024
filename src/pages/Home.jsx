@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import About from "./About";
 import Experience from "../components/Experience";
 import TextGenerate from "../components/TextGenerate";
-import Footer from "../components/Footer";
+import Footer from '../components/Footer';
 import GridBackground from "../components/ui/GridBackground";
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
       </GridBackground>
       <div className="bg-black p-5">
         <TextGenerate />
-        <Footer />
+        <Footer/>
       </div>
       {/* <Experience/> */}
     </>

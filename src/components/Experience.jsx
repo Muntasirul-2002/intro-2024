@@ -7,7 +7,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
-import megaminds from "../assets/images/megaminds.jpg";
+// import megaminds from "../assets/images/megaminds.jpg";
 import { Link } from "react-router-dom";
 
 const Experience = () => {
@@ -35,7 +35,7 @@ const Experience = () => {
           <TimelineSeparator>
             <TimelineConnector />
             <TimelineDot>
-              <img src={megaminds} alt="Megaminds Logo" />
+              <img src="" alt="Megaminds Logo" />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
