@@ -22,6 +22,11 @@ const NavItems = () => {
             link: "/resume",
             icon: <IconContract className="h-4 w-4 text-neutral-500 dark:text-white" />,
           },
+          {
+            name: "Services",
+            link: "/services",
+            icon: <IconContract className="h-4 w-4 text-neutral-500 dark:text-white" />,
+          },
         {
           name: "Contact",
           link: "/contact",

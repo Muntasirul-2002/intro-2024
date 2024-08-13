@@ -1,7 +1,7 @@
 import React from "react";
 import Experience from "../components/Experience";
 import Education from "../components/Education";
-import Card from "../components/Card";
+
 
 
 const Resume = () => {
@@ -27,9 +27,7 @@ const Resume = () => {
           </div>
         </div>
       </div>
-    <div>
-      <Card/>
-    </div>
+   
     </div>
   );
 };
