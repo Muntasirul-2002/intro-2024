@@ -8,8 +8,7 @@ const Footer = () => {
       <footer className="w-full md:mb-5">
         <div className="flex flex-col items-center">
           <h1 className="font-bold text-4xl text-white md:text-5xl text-center lg:mx-w-[45vw] mb-5">
-            Let's <span className="text-blue-500">connect</span> build a
-            software product together🤝
+            Let's <span className="text-blue-500">connect</span> together & build something new 🤝
           </h1>
           <a href="mailto:muntasirul.msd@gmail.com">
             <MagicButton />
