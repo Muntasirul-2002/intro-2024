@@ -10,24 +10,24 @@ import Typography from "@mui/material/Typography";
 // import megaminds from "../assets/images/megaminds.jpg";
 import { Link } from "react-router-dom";
 
-const Experience = () => {
+const Education = () => {
   return (
     <div>
+         <div>
       <h1 className="flex justify-center text-3xl md:text-5xl items-center gap-2 text-white font-bold mb-2 mt-10">
-        <span className="text-blue-500">My</span> Experience
+        <span className="text-blue-500">My</span> Education
       </h1>
-      <p className="flex justify-center text-gray-500 items-center">
-        I switch some of companies. It's mostly about the culture.
-      </p>
+      
       <Timeline position="alternate">
-        <TimelineItem>
+        {/* <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}
             align="right"
             variant="body2"
             className="text-white"
           >
-            Apr,2024 - May,2024
+            2021 - 2025
+            <p className="text-sm">CGPA : 7</p>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -38,22 +38,25 @@ const Experience = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              <div className="font-bold text-white">Senior Web Developer</div>
+              <div className="font-bold text-white">Computer Science & Engineering</div>
             </Typography>
             <Typography>
               <Link to="https://megamindsit.in/">
-                <p className="text-sm text-white">Megaminds IT Services</p>
+                <p className="text-sm text-white ">
+                  KG Reddy College of Engineering & Technology , HYD,IN
+                </p>
               </Link>
             </Typography>
           </TimelineContent>
-        </TimelineItem>
+        </TimelineItem> */}
         <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}
             variant="body2"
             className="text-white"
           >
-            Nov,2023 - Apr,2024
+            2021 - 2025
+            <p>CGPA: 7.0</p>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -64,12 +67,15 @@ const Experience = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              <div className="font-bold text-white">Web Developer</div>
+              <div className="font-bold text-white leading-tight mb-3">Computer Science Eng.(CSE)</div>
             </Typography>
+            
             <Typography>
               {" "}
-              <Link to="https://megamindsit.in/">
-                <p className="text-sm text-white">Megaminds IT Services</p>
+              <Link to="https://kgr.ac.in/">
+                <p className="text-sm text-white">
+                  KG Reddy College of Engineering & Technology, HYD,IN
+                </p>
               </Link>
             </Typography>
           </TimelineContent>
@@ -80,51 +86,35 @@ const Experience = () => {
             variant="body2"
             className="text-white"
           >
-            Oct,2023 - Oct,2023
+            2019 - 2021
+            <p>Grade: 72%</p>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
-            <TimelineDot variant="outlined">
-              <img src="../assets/images/megaminds.jpg" alt="" />
-            </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <Typography variant="h6" component="span">
-              <div className="font-bold text-white">Freelance</div>
-            </Typography>
-            <Typography>
-              <p className="text-sm text-white">Relite services</p>
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-        <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            variant="body2"
-            className="text-white"
-          >
-            Oct,2023 - Oct,2023
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
-            <TimelineDot color="secondary">
-              <img src="/megaminds.jpg" alt="" />
+            <TimelineDot color="primary">
+              <img src="/megaminds.jpg" alt="image" />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              <div className="font-bold text-white">Web Developer</div>
+              <div className="font-bold text-white">Higher Secondary</div>
             </Typography>
             <Typography>
-              <p className="text-sm text-white"> Built-in Tech</p>
+              {" "}
+              <Link to="https://www.facebook.com/profile.php?id=100050459005996">
+                <p className="text-sm text-white">
+                  ARTM Public School, WB,IN
+                </p>
+              </Link>
             </Typography>
           </TimelineContent>
         </TimelineItem>
+
       </Timeline>
     </div>
-  );
-};
+    </div>
+  )
+}
 
-export default Experience;
+export default Education
