@@ -1,16 +1,7 @@
 import React from "react";
 import { cn } from "../lib/utils";
 import { BentoGrid, BentoGridItem } from "../components/ui/BentoGrid";
-import {
-  IconBoxAlignRightFilled,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-  IconPhoneCalling,
-  IconMail,
-  IconMapPin,
-} from "@tabler/icons-react";
+import { IconPhoneCalling, IconMail, IconMapPin } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -24,7 +15,10 @@ const BentoGridSection = () => {
             title={item.title}
             description={item.description}
             header={item.header}
-            className={cn("[&>p:text-lg]", item.className)}
+            className={cn(
+              "[&>p:text-lg] bg-black border border-gray-600",
+              item.className
+            )}
             icon={item.icon}
           />
         ))}
@@ -91,8 +85,6 @@ const SkeletonOne = () => {
 };
 
 const SkeletonTwo = () => {
- 
-
   return (
     <motion.div
       initial="initial"
@@ -100,8 +92,7 @@ const SkeletonTwo = () => {
       whileHover="hover"
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
     >
-     
-        <img src="/github.jpg" className=" rounded-lg" alt="" />
+      <img src="/github.jpg" className=" rounded-lg" alt="" />
     </motion.div>
   );
 };
@@ -136,6 +127,7 @@ const SkeletonThree = () => {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          className="flex items-center justify-center"
         />
       </div>
       <motion.div className="h-full w-full rounded-lg"></motion.div>
@@ -173,7 +165,7 @@ const SkeletonFour = () => {
     >
       <motion.div
         variants={first}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl bg-black p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <img
           src="/linkedin.jpg"
@@ -184,36 +176,37 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Linkedin profile
         </p>
-        <Link to='https://www.linkedin.com/in/muntasirulislam/' className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <Link
+          to="https://www.linkedin.com/in/muntasirulislam/"
+          className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4"
+        >
           Follow
         </Link>
       </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
-        <img
-          src="/up.png"
-          alt="avatar"
-          className="rounded-full h-10 w-10"
-        />
+      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-black p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
+        <img src="/up.png" alt="avatar" className="rounded-full h-10 w-10" />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Upwork
         </p>
-        <Link to='https://www.upwork.com/freelancers/~0142a9ac92604aeee1' className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-         Consultation
+        <Link
+          to="https://www.upwork.com/freelancers/~0142a9ac92604aeee1"
+          className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4"
+        >
+          Consultation
         </Link>
       </motion.div>
       <motion.div
         variants={second}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl bg-black p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
-        <img
-          src="/fb.jpg"
-          alt="avatar"
-          className="rounded-full h-10 w-10"
-        />
+        <img src="/fb.jpg" alt="avatar" className="rounded-full h-10 w-10" />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Facebook
         </p>
-        <Link to='https://www.facebook.com/muntasirul.msd' className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <Link
+          to="https://www.facebook.com/muntasirul.msd"
+          className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4"
+        >
           follow
         </Link>
       </motion.div>
@@ -255,28 +248,24 @@ const SkeletonFive = () => {
     >
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2 items-start space-x-2 bg-white dark:bg-black"
+        className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2 items-start space-x-2 bg-black dark:bg-black"
       >
-        <img
-          src="/user.jpg"
-          alt="avatar"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="text-xs text-neutral-500">
+        <img src="/user.jpg" alt="avatar" className="rounded-full h-10 w-10" />
+        <p className="text-xs text-white">
           Hi Muntasirul, let's connect !! ....
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
+        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-black dark:bg-black"
       >
-        <p className="text-xs text-neutral-500">yeah sure !! 😃</p>
-        <div className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2 items-start space-x-2 bg-white dark:bg-black">
-        <img
-          src="/linkedin.jpg"
-          alt="avatar"
-          className="rounded-full h-10 w-10"
-        />
+        <p className="text-xs text-white">yeah sure !! 😃</p>
+        <div className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2 items-start space-x-2 border-transparent dark:bg-black">
+          <img
+            src="/linkedin.jpg"
+            alt="avatar"
+            className="rounded-full h-10 w-10"
+          />
         </div>
       </motion.div>
     </motion.div>
@@ -285,18 +274,18 @@ const SkeletonFive = () => {
 
 const items = [
   {
-    title: "Contact Details",
+    title: <h1 className="text-white">Contact Details</h1>,
 
     header: (
-      <div className="flex flex-col items-start  space-y-2">
+      <div className="flex flex-col items-start text-white space-y-2">
         <span className="flex items-center">
           <IconPhoneCalling className="text-blue-500" />
-          <p className="ms-4 text-black text-md font-semibold">+916294268784</p>
+          <p className="ms-4 text-md font-semibold">+916294268784</p>
         </span>
         <span className="flex items-center">
           <IconMail className="text-blue-500" />
           <a
-            className="ms-4 text-black text-md font-semibold"
+            className="ms-4  text-md font-semibold"
             href="mailto:muntasirul.msd@gmail.com"
           >
             muntasirul.msd@gmail.com
@@ -304,7 +293,7 @@ const items = [
         </span>
         <span className="flex items-center">
           <IconMapPin className="text-blue-500" />
-          <p className="ms-4 text-black text-md font-semibold">Hyderabad,IN</p>
+          <p className="ms-4  text-md font-semibold">Hyderabad,IN</p>
         </span>
       </div>
     ),
@@ -313,7 +302,10 @@ const items = [
   {
     title: (
       <div>
-        <a href="https://github.com/Muntasirul-2002">Let's collaborate on <span className="text-blue-500 underline">Github</span>🤝</a>
+        <a href="https://github.com/Muntasirul-2002" className="text-white">
+          Let's collaborate on{" "}
+          <span className="text-blue-500 underline">Github</span>🤝
+        </a>
       </div>
     ),
 
@@ -321,29 +313,35 @@ const items = [
     className: "md:col-span-1",
   },
   {
-    title: "Find me",
+    title: <h1 className="text-white">Find me</h1>,
     header: <SkeletonThree />,
     className: "md:col-span-1",
   },
   {
-    title: "Social Network",
-   
+    title: (
+      <h1 className="text-white">
+Social Network
+      </h1>
+    ),
+
     header: <SkeletonFour />,
     className: "md:col-span-2",
-   
   },
   {
     title: (
       <div>
-        <a className="text-blue-500 underline" href="https://wa.me/+916294268784?text=Hello%20there!" target="_blank">
-        Whatsapp
+        <a
+          className="text-blue-500 underline"
+          href="https://wa.me/+916294268784?text=Hello%20there!"
+          target="_blank"
+        >
+          Whatsapp
         </a>
       </div>
     ),
-   
+
     header: <SkeletonFive />,
     className: "md:col-span-1",
-   
   },
 ];
 
