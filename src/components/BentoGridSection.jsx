@@ -9,10 +9,10 @@ import {
   IconTableColumn,
   IconPhoneCalling,
   IconMail,
-  IconMapPin
-
+  IconMapPin,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const BentoGridSection = () => {
   return (
@@ -91,24 +91,8 @@ const SkeletonOne = () => {
 };
 
 const SkeletonTwo = () => {
-  const variants = {
-    initial: {
-      width: 0,
-    },
-    animate: {
-      width: "100%",
-      transition: {
-        duration: 0.2,
-      },
-    },
-    hover: {
-      width: ["0%", "100%"],
-      transition: {
-        duration: 2,
-      },
-    },
-  };
-  const arr = new Array(6).fill(0);
+ 
+
   return (
     <motion.div
       initial="initial"
@@ -116,16 +100,8 @@ const SkeletonTwo = () => {
       whileHover="hover"
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
     >
-      {arr.map((_, i) => (
-        <motion.div
-          key={"skeleton-two-" + i}
-          variants={variants}
-          style={{
-            maxWidth: Math.random() * (100 - 40) + 40 + "%",
-          }}
-          className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
-        ></motion.div>
-      ))}
+     
+        <img src="/github.jpg" className=" rounded-lg" alt="" />
     </motion.div>
   );
 };
@@ -150,12 +126,18 @@ const SkeletonThree = () => {
         repeatType: "reverse",
       }}
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
-      style={{
-        background:
-          "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
-        backgroundSize: "400% 400%",
-      }}
     >
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15231.937251577456!2d78.39559795!3d17.36448785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDIxJzIxLjkiTiA3OMKwMjMnNTIuMSJF!5e0!3m2!1sen!2sin!4v1723727120359!5m2!1sen!2sin"
+          width={250}
+          height={200}
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
       <motion.div className="h-full w-full rounded-lg"></motion.div>
     </motion.div>
   );
@@ -194,45 +176,46 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="/linkedin.jpg"
           alt="avatar"
           className="rounded-full h-10 w-10"
         />
+
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Just code in Vanilla Javascript
+          Linkedin profile
         </p>
-        <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Delusional
-        </p>
+        <Link to='https://www.linkedin.com/in/muntasirulislam/' className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
+          Follow
+        </Link>
       </motion.div>
       <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="/up.png"
           alt="avatar"
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Tailwind CSS is cool, you know
+          Upwork
         </p>
-        <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Sensible
-        </p>
+        <Link to='https://www.upwork.com/freelancers/~0142a9ac92604aeee1' className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
+         Consultation
+        </Link>
       </motion.div>
       <motion.div
         variants={second}
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="/fb.jpg"
           alt="avatar"
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          I love angular, RSC, and Redux.
+          Facebook
         </p>
-        <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Helpless
-        </p>
+        <Link to='https://www.facebook.com/muntasirul.msd' className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
+          follow
+        </Link>
       </motion.div>
     </motion.div>
   );
@@ -275,21 +258,26 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2 items-start space-x-2 bg-white dark:bg-black"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="/user.jpg"
           alt="avatar"
           className="rounded-full h-10 w-10"
         />
         <p className="text-xs text-neutral-500">
-          There are a lot of cool frameworks out there like React, Angular, Vue,
-          Svelte that can make your life ....
+          Hi Muntasirul, let's connect !! ....
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
       >
-        <p className="text-xs text-neutral-500">Use PHP.</p>
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+        <p className="text-xs text-neutral-500">yeah sure !! 😃</p>
+        <div className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2 items-start space-x-2 bg-white dark:bg-black">
+        <img
+          src="/linkedin.jpg"
+          alt="avatar"
+          className="rounded-full h-10 w-10"
+        />
+        </div>
       </motion.div>
     </motion.div>
   );
@@ -298,69 +286,64 @@ const SkeletonFive = () => {
 const items = [
   {
     title: "Contact Details",
-   
+
     header: (
-        <div className="flex flex-col items-start  space-y-2">
+      <div className="flex flex-col items-start  space-y-2">
         <span className="flex items-center">
           <IconPhoneCalling className="text-blue-500" />
           <p className="ms-4 text-black text-md font-semibold">+916294268784</p>
         </span>
         <span className="flex items-center">
           <IconMail className="text-blue-500" />
-          <a className="ms-4 text-black text-md font-semibold" href="mailto:muntasirul.msd@gmail.com">muntasirul.msd@gmail.com</a>
+          <a
+            className="ms-4 text-black text-md font-semibold"
+            href="mailto:muntasirul.msd@gmail.com"
+          >
+            muntasirul.msd@gmail.com
+          </a>
         </span>
         <span className="flex items-center">
           <IconMapPin className="text-blue-500" />
           <p className="ms-4 text-black text-md font-semibold">Hyderabad,IN</p>
         </span>
       </div>
-      
     ),
     className: "md:col-span-1",
   },
   {
-    title: "Automated Proofreading",
-    description: (
-      <span className="text-sm">
-        Let AI handle the proofreading of your documents.
-      </span>
+    title: (
+      <div>
+        <a href="https://github.com/Muntasirul-2002">Let's collaborate on <span className="text-blue-500 underline">Github</span>🤝</a>
+      </div>
     ),
+
     header: <SkeletonTwo />,
     className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Contextual Suggestions",
-    description: (
-      <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
-      </span>
-    ),
+    title: "Find me",
     header: <SkeletonThree />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Sentiment Analysis",
-    description: (
-      <span className="text-sm">
-        Understand the sentiment of your text with AI analysis.
-      </span>
-    ),
+    title: "Social Network",
+   
     header: <SkeletonFour />,
     className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+   
   },
   {
-    title: "Text Summarization",
-    description: (
-      <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
-      </span>
+    title: (
+      <div>
+        <a className="text-blue-500 underline" href="https://wa.me/+916294268784?text=Hello%20there!" target="_blank">
+        Whatsapp
+        </a>
+      </div>
     ),
+   
     header: <SkeletonFive />,
     className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+   
   },
 ];
 
